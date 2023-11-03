@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>열었나요?!</title>
+    <link rel="stylesheet" href="map.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId="></script>
+    <script src="main.js"></script>
+    <script src="notice.js"></script>
+    <script src="category.js"></script>
+    <script src="place.js"></script>
+</head>
+<body>
+<div class="side-bar">
+    <div class="side-bar-top">
+        <a href="" id="logo"></a>
+        <a href="" id="seoul"></a>
+        <a href="" id="suwon"></a>
+    </div>
+    <div class="side-bar-bottom">
+        <a href="" id="my-page"></a>
+    </div>
+</div>
+    <div class="side-bar-body">
+        <div class="search-container">
+            <input type="text" placeholder="장소명을 입력해주세요">
+            <button class="search-btn"></button>
+        </div>
+        <div class="notice-container">
+            <span class="notice-icon"></span>
+        </div>
+        <div class="category-container">
+        </div>
+        <div class="place-card-container">
+        </div>
+    </div>
+    <button class="toggle-button"></button>
+    <div class="place">
+        <div class="place-card">
+            <div class="place-image-container2">
+                <div class="main-image"></div>
+                <div class="side-image"></div>
+                <div class="remain-image"></div>
+            </div>
+            <div class="place-title">
+                <div class="place-name">Sample place<span class="open-tag"></span></div>
+                <div class="place-location"><span></span>산학협력센터 85718</div>
+                <div class="place-operation-time"><span></span>00:00 - 23:59</div>
+            </div>
+        </div>
+        <div class="place-detail">
+            <div class="place-detail-menu">
+                <a href=""><span class="place-menu-item place-menu-item-clicked">정보</span></a>
+                <a href=""><span class="place-menu-item">사진</span></a>
+                <a href=""><span class="place-menu-item">리뷰</span></a>
+            </div>
+            <div class="place-detail-info">
+                <div class="location"></div>
+                <div class="location"></div>
+                <div class="location"></div>
+                <div class="location"></div>
+                <div class="location"></div>
+                <div class="location"></div>
+
+            </div>
+            <div class="place-detail-images">
+                <p>사진</p>
+                <div class="slider-wrapper">
+                    <div class="slider-arrow slider-arrow-left"></div> <!-- 왼쪽 화살표 추가 -->
+                    <div class="place-image"></div>
+                    <div class="slider-arrow slider-arrow-right"></div> <!-- 오른쪽 화살표 추가 -->
+                </div>
+            </div>
+            <div class="place-detail-reviews">
+                <p>리뷰</p>
+                <span>준비중..</span>
+            </div>
+        </div>
+    </div>
+    <button class="place-close-button"></button>
+    <div class="nav-bar">
+        <div class="nav-item nav-school"><span></span>학교시설</div>
+        <div class="nav-item nav-cafe"><span></span>카페</div>
+        <div class="nav-item nav-restaurant"><span></span>식당</div>
+        <div class="nav-item nav-medical"><span></span>의료</div>
+        <div class="nav-item nav-pc"><span></span>PC방</div>
+        <div class="nav-item nav-mart"><span></span>마트</div>
+    </div>
+<div id="map"></div>
+<script  src = 'map.js' id="snippet" class="snippet"></script>
+<button class="current-button"></button>
+</body>
+</html>
