@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var $noticeContainer = $('.notice-container');
 
-    $.get("http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/notice/recent", function (data) {
+    $.get("http://3.38.81.73:8080/notice/recent", function (data) {
         var noticesData = data.noticePrevs;
         var noticePrevCount = data.noticePrevsCount;
 
@@ -43,7 +43,7 @@ $(document).ready(function () {
             // 현재 보이는 .notice-prev의 notice-id 속성 값을 가져옵니다.
             var noticeId = $(this).find('.notice-prev:visible').attr('notice-id');
 
-            $.get("http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/notice/" + noticeId, function (data) {
+            $.get("http://3.38.81.73:8080/notice/" + noticeId, function (data) {
                 var title = data.title;
                 var content = data.content;
 

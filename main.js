@@ -15,7 +15,7 @@ $(document).ready(function() {
     };
     $.ajax({
         url: kind === null ?
-            'http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/cards' : `http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/cards/${kind}`,
+            'http://3.38.81.73:8080/place/cards' : `http://3.38.81.73:8080/place/cards/${kind}`,
         method: 'GET',
         data: params,
         success: function (response) {
