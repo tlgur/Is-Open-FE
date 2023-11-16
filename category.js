@@ -20,7 +20,7 @@ function loadMoreData(kind) {
     // 서버에 요청
     $.ajax({
         url: kind === null ?
-            'http://localhost:8080/place/cards' : `http://localhost:8080/place/cards/${kind}`,
+            'http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/cards' : `http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/cards/${kind}`,
         method: 'GET',
         data: params,
         success: function(response) {
@@ -63,7 +63,7 @@ $(document).ready(function() {
     $(".nav-item").click(function() {
         page = 0; // 페이지 초기화
         kind = $(this).attr('class').split(' ')[1].split('-')[1];
-        let url = `http://localhost:8080/place/usages/${kind}`;
+        let url = `http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/usages/${kind}`;
 
         // 서버에 데이터 요청
         $.get(url, function(data) {
@@ -119,7 +119,7 @@ $(document).ready(function() {
 
         $.ajax({
             url: kind === null ?
-                'http://localhost:8080/place/cards' : `http://localhost:8080/place/cards/${kind}`,
+                'http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/cards' : `http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/cards/${kind}`,
             method: 'GET',
             data: params,
             success: function (response) {
@@ -182,7 +182,7 @@ $(document).ready(function() {
         // 서버에 요청
         $.ajax({
             url: kind === null ?
-                'http://localhost:8080/place/cards' : `http://localhost:8080/place/cards/${kind}`,
+                'http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/cards' : `http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/cards/${kind}`,
             method: 'GET',
             data: params,
             success: function (response) {

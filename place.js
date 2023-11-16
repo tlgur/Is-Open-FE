@@ -22,7 +22,7 @@ $(document).ready(function () {
 
         $.ajax({
             url:
-                `http://localhost:8080/place/detail/${$(this).attr('place-id')}`,
+                `http://ec2-3-38-81-73.ap-northeast-2.compute.amazonaws.com/place/detail/${$(this).attr('place-id')}`,
             method: 'GET',
             success: function (response) {
             },
